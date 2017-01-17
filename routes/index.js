@@ -25,7 +25,7 @@ router.post('/dogs', (req, res, next) => {
     client.query('INSERT INTO dogs(name, image_url, score) values($1, $2, $3)',
     [data.name, data.image_url, data.score]);
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM dogs ORDER BY id ASC');
+    const query = 2query('SELECT * FROM dogs ORDER BY id ASC');
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
